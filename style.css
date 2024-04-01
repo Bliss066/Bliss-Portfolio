@@ -3,64 +3,192 @@
     margin: 0;
     box-sizing: border-box;
 }
+.global
+{
+    background-color: rgba(4, 4, 19, 0.945);
+    h1,h2,h3,h4,h5,h6
+    {
+        color: white;
+    }
+    p
+    {
+        color: silver ;
+    }
+    a
+    {
+        color: silver;
+        transition: .3s ease-in-out;
+        text-decoration: none !important;
+    }
+    a:hover
+    {
+        color: white;
+    }
+    a.button
+    {
+        width: fit-content;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 50px;
+        display: block;
+        border: 1px solid silver;
+        background-color: transparent;
+    }
+    a.button>span
+    {
+        margin-right: 10px;
+    }
+}
 /* HOME PAGE */
-.active_page{
-    padding-bottom: 5px;
-    border-bottom: 1px solid black;
-}
-header{
+header
+{
+    z-index: 2;
+    width: 100vw;
+    height: 15vh;
+    padding: 0px 120px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 2% 10%;
-    background-color: rgba(36, 36, 95, 0.918) ;
+    align-items: center;
+    background-color: rgb(4, 4, 19);
+    div.logo
+    {
+        scale: 1.3;
+    }
+    div.logo>h1
+    {
+        font-size: 30px;
+        line-height: 10px;
+        color: rgba(192, 192, 192, 0.336);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    div.logo>h1>span
+    {
+        z-index: 1;
+        padding-left: 10px;
+        letter-spacing: 1px;
+        font-size: 22px;
+        color: orange;
+        font-family: cursive;
+        font-weight: bolder;
+        text-shadow: 1px 1px .5px rgba(255, 255, 255, 0.767);
+    }
+    menu
+    {
+        width: 50vw;
+        display: flex;
+        justify-content: space-around;
+    }
+    menu>li
+    {
+        list-style-type: none;
+    }
+    menu>li>a
+    {
+        font-size: 20px;
+    }
 }
-header h1{
-    color: white;
-    font-size: 39px;
-}
-header ul{
+div.home-page
+{
+    width: 100vw;
+    height: 100vh;
+    border-bottom: 1px solid white;
+    padding-left: 120px;
+    padding-top: 120px;
     display: flex;
+    justify-content: space-between;
 }
-header ul li{
-    padding: 20px;
-    list-style: none;
-}
-header ul li a{
-    font-size: 20px;
-    text-decoration: none;
-    color: gray;
-}
-header button{
-    border-radius: 20px;
-    padding: 10px 2%;
-    border: 0;
-    font-size: 16px;
-}
-.home_page{
-    background-color: rgba(36, 36, 95, 0.918) ;
-    width: 100vh;
+div.home-page>
+div:nth-child(1)
+{
+    width: 40%;
     display: flex;
-    scale: 1;
+    flex-direction: column;
+    h3
+    {
+        font-size: 50px;
+    }
+    h2
+    {
+        font-size: 70px;
+    }
+    p
+    {
+        margin: 40px 0px;
+    }
 }
-.text{
-    width: 25%;
-}
-.image{
-    width: 75%;
-}
-.image img{
-    width: 100%;
+div.home-page>
+div:nth-child(2)
+{
+    width: 60%;
+    height: 81.5vh;
+    position: relative;
+    img
+    {
+        z-index: 1;
+        width: 90%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        position: absolute;
+    }
+    div.circle,
+    div.circle1
+    {
+        width: 48%;
+        height: 90%;
+        right: 15%;
+        top: 10%;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-left: none;
+        position: absolute;
+        border: 1px solid white;
+        div
+        {
+            z-index: 1;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid white;
+            background-color: rgb(4, 4, 19);
+        }
+        div.inner-circle1{
+            right: 30%;
+            top: -3%;
+        }
+        div.inner-circle2{
+            right:2%;
+            top: 15%;
+        }
+        div.inner-circle3{
+            right: -5%;
+            top: 40%;
+        }
+        div.inner-circle4{
+            right: -2%;
+            top: 65%;
+        }
+    }
+    div.circle1{
+        height: 95%;
+        right: 2%;
+        top: 5%;
+        border-top: none;
+        border-bottom: none;
+        border-color: rgba(192, 192, 192, 0.329);
+    }
 }
 .about_page{
     padding: 70px;
-    background-color: #F5F5F5;
 }
 .about_page .container {
     border: 10px solid white;
     display: flex;
     padding: 20px;
-    background-color: #fff;
 }
 .about_page .container .left{
     width: 100%;
@@ -92,7 +220,6 @@ header button{
     padding: 10px;
 } 
 .about_page .container .left .second .contain { 
-    background-color: rgb(192, 192, 192); 
     width: 80%; 
 } 
 .about_page .container .left .second .skill { 
@@ -135,7 +262,6 @@ header button{
 }
 .services_page{
     padding: 70px;
-    background-color: #F5F5F5;
 }
 .services_page h1{
     text-align: center;
@@ -164,7 +290,6 @@ header button{
     margin: 1%;
     border: 1px solid white;
     border-radius: 10px;
-    background-color: #fff;
 }
 .services_page .servicesflex .wrap .dot{
     width: 25px ;
@@ -217,7 +342,6 @@ header button{
 }
 .blog_page{
     padding: 70px;
-    background-color: #F5F5F5;
 }
 .blog_page h1{
     text-align: center;
@@ -238,7 +362,6 @@ header button{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background-color: #fff;
 }
 .blog_page .blogflex .wrap{
     border: 1px solid grey;
@@ -333,7 +456,6 @@ header button{
     text-decoration: none;
 }
 footer{
-    background-color:rgba(0, 0, 0, 0.797);
     text-align: center;
     color: white;
 }
@@ -416,7 +538,6 @@ footer h2{
     width: 80%;
     padding: 10px;
     margin:2% 10%;
-    background-color: rgba(6, 77, 6, 0.884);
 }
 .login .container .flex .left .button a{
     text-decoration: none;
@@ -514,7 +635,6 @@ footer h2{
     width: 80%;
     padding: 10px;
     margin:2% 10%;
-    background-color: rgba(6, 77, 6, 0.884);
 }
 .sign_up .container .flex .left .button a{
     text-decoration: none;

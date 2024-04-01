@@ -1,0 +1,8 @@
+@media only screen and (max-width:480px) {
+    .login .container .flex{
+        flex-direction: column-reverse;
+    }
+}
+@media only screen and (max-width: 1024px) and (min-width:481px){
+
+}
